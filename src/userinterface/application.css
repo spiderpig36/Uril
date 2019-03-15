@@ -1,0 +1,6 @@
+.pit {
+	-fx-border-width:1;
+	-fx-border-color: black;
+	-fx-border-style: solid;
+	-fx-text-alignment: center;
+}

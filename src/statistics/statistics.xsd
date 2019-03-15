@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <xsd:element name="project">
+  <xsd:attribute name="name" type="xsd:string"/>
+   <xsd:complexType>
+    <xsd:sequence>
+     <xsd:element name="target">
+      <xsd:attribute name="name" type="xsd:string"/>
+       <xsd:complexType>
+        <xsd:all>
+         <xsd:element name="javac">
+          <xsd:attribute name="destdir" type="xsd:string"/>
+          <xsd:attribute name="srcdir" type="xsd:string"/>
+           <xsd:complexType>
+            <xsd:all>
+             <xsd:element name="classpath">
+              <xsd:attribute name="refid" type="xsd:string"/>
+             </xsd:element>
+            </xsd:all>
+           </xsd:complexType>
+          </xsd:element>
+        </xsd:all>
+       </xsd:complexType>
+       <xsd:complexType>
+       <xsd:all>
+<xsd:element name="junit">
+<xsd:attribute name="printsummary" default="no">							
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="yes"/>
+<xsd:enumeration value="no"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:attribute>
+<xsd:all>
+<xsd:element name="classpath">
+<xsd:attribute name="refid" type="xsd:string"/>
+</xsd:element>
+<xsd:element name="test">
+<xsd:attribute name="name" type="xsd:string"/>
+</xsd:element>
+</xsd:all>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>

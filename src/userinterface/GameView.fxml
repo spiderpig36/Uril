@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.collections.*?>
+
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="361.0" prefWidth="491.0">
+         <children>
+            <MenuBar fx:id="menuBar">
+               <menus>
+                  <Menu text="Game">
+                     <items>
+                        <MenuItem id="1" onAction="#handleMenuAction" text="Start" />
+                     </items>
+                  </Menu>
+                  <Menu text="Settings">
+                     <items>
+                        <Menu text="Computer Difficulty">
+                     		<items>
+                     		    <fx:define>
+              					<ToggleGroup fx:id="tglDifficulty"/>
+          					</fx:define>
+                        		<RadioMenuItem id="4" toggleGroup="$tglDifficulty" onAction="#handleMenuAction" text="Easy" />
+                        		<RadioMenuItem id="5" toggleGroup="$tglDifficulty" onAction="#handleMenuAction" text="Medium" />
+                        		<RadioMenuItem id="6" toggleGroup="$tglDifficulty" selected="true" onAction="#handleMenuAction" text="Difficult" />
+                     		</items>
+                  	  </Menu>
+                        <CheckMenuItem selected="true" text="Animations" fx:id="cmbAnimation" />
+                        <CheckMenuItem selected="true" text="Computer Delay" fx:id="cmbDelay" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <ComboBox fx:id="cbxPlayerA" onAction="#handleModeChange" prefWidth="528.0" />
+         	<GridPane fx:id="grid" alignment="center" hgap="10" prefHeight="201.0" prefWidth="491.0" vgap="10">
+         	<padding>
+                  <Insets bottom="10" left="25" right="25" top="25" />
+               </padding>
+            <children>
+            		<Label onMouseClicked="#handlePitSelected" prefHeight="40.0" prefWidth="40.0" styleClass="pit" text="" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+            		<Label onMouseClicked="#handlePitSelected" prefHeight="40.0" prefWidth="40.0" styleClass="pit" text="" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+            		<Label onMouseClicked="#handlePitSelected" prefHeight="40.0" prefWidth="40.0" styleClass="pit" text="" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+            		<Label onMouseClicked="#handlePitSelected" prefHeight="40.0" prefWidth="40.0" styleClass="pit" text="" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+            		<Label onMouseClicked="#handlePitSelected" prefHeight="40.0" prefWidth="40.0" styleClass="pit" text="" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+            		<Label onMouseClicked="#handlePitSelected" prefHeight="40.0" prefWidth="40.0" styleClass="pit" text="" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                    
+            		<Label onMouseClicked="#handlePitSelected" prefHeight="40.0" prefWidth="40.0" styleClass="pit" text="" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+            		<Label onMouseClicked="#handlePitSelected" prefHeight="40.0" prefWidth="40.0" styleClass="pit" text="" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+            		<Label onMouseClicked="#handlePitSelected" prefHeight="40.0" prefWidth="40.0" styleClass="pit" text="" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+            		<Label onMouseClicked="#handlePitSelected" prefHeight="40.0" prefWidth="40.0" styleClass="pit" text="" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+            		<Label onMouseClicked="#handlePitSelected" prefHeight="40.0" prefWidth="40.0" styleClass="pit" text="" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+            		<Label onMouseClicked="#handlePitSelected" prefHeight="40.0" prefWidth="40.0" styleClass="pit" text="" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+            </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+         	</GridPane>
+            <ComboBox fx:id="cbxPlayerB" onAction="#handleModeChange" prefWidth="528.0" />
+            <HBox>
+               <children>
+                  <Label text="Score">
+                     <VBox.margin>
+                        <Insets left="30.0" top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblTurns" text="Turns:">
+                     <HBox.margin>
+                        <Insets left="100.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <Label fx:id="lblPlayerA" text="Player A:">
+               <VBox.margin>
+                  <Insets left="30.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblPlayerB" text="Player B:">
+               <VBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblWinner">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="30.0" top="15.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+         </children>
+      </VBox>
+      <VBox prefHeight="204.0" prefWidth="156.0">
+         <children>
+            <Label text="Statistics">
+               <VBox.margin>
+                  <Insets left="5.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblGamesPlayed" text="Games played: 0">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblAverageTurns" text="Average turns: 0">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Human">
+               <VBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblHumanWins" text="Wins: 0">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblHumanLosses" text="Losses: 0">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Optimal">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblOptimalWins" text="Wins: 0">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblOptimalLosses" text="Losses: 0">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Random">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblRandomWins" text="Wins: 0">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblRandomLosses" text="Losses: 0">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Greedy">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblGreedyWins" text="Wins: 0">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblGreedyLosses" text="Losses: 0">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Defensive">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblDefensiveWins" text="Wins: 0">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblDefensiveLosses" text="Losses: 0">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</HBox>

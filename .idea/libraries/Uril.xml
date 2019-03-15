@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Uril">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/deploy/Uril.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statistics>
+    <gamesPlayed>94</gamesPlayed>
+    <averageTurns>62</averageTurns>
+    <playerMode name="Optimal">
+        <wins>56</wins>
+        <losses>1</losses>
+    </playerMode>
+    <playerMode name="Random">
+        <wins>0</wins>
+        <losses>47</losses>
+    </playerMode>
+    <playerMode name="Human">
+        <wins>1</wins>
+        <losses>5</losses>
+    </playerMode>
+    <playerMode name="Greedy">
+        <wins>3</wins>
+        <losses>4</losses>
+    </playerMode>
+    <playerMode name="Defensive">
+        <wins>2</wins>
+        <losses>5</losses>
+    </playerMode>
+</statistics>
